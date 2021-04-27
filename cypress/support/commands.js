@@ -1,3 +1,10 @@
+Cypress.Commands.add('login',(user)=>{
+    cy.get('#txtUsername').type(user.userName)
+    cy.get('#txtPassword').type(user.password)
+    cy.get('#btnLogin').click()
+    cy.title().should('eq','OrangeHRM')
+    cy.get('.box').find('.head').contains('Dashboard')
+})
 // ***********************************************
 // This example commands.js shows you how to
 // create various custom commands and overwrite
