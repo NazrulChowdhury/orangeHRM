@@ -1,0 +1,7 @@
+# dependencies
+node_modules
+
+# testing
+coverage
+cypress/videos
+cypress/screenshots
