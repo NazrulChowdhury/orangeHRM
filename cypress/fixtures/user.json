@@ -2,5 +2,21 @@
     "userName" : "Admin",
     "password" : "admin123",
     "wrongName" : "wrongName",
-    "wrongPassword" : "wrongPassword"
+    "wrongPassword" : "wrongPassword",
+    "myInfo" :{
+        "firstName" : "naz",
+        "lastName" : "chow",
+        "employeeId" : "1212",
+        "drivingLicenseNumber" : 8888,
+        "licenseExpiryDate" : "2022-04-20",
+        "SSNnumber" : "2222",
+        "SINnumber" : "3333",
+        "gender" : 1,
+        "maritalStatus" : "Single",
+        "nationality" : "British",
+        "dob" : "1981-11-19",
+        "nickName" : "nazu",
+        "militaryService" : "Commando",
+        "Smoker" : 0
+    }
 }
