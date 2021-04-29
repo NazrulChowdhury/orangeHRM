@@ -2,7 +2,7 @@ export function goToMyInfoPage(){
     cy.get('#menu_pim_viewMyDetails').should('have.text','My Info').click()
     cy.url().should('include','/viewMyDetails')
 }
-export function fillPersonalDetails(user){
+export function updatePersonalDetails(user){
     cy.get('#btnSave').should('have.value','Edit').click()
     cy.get('#personal_txtEmpFirstName').clear().type(user.myInfo.firstName)
     cy.get('#personal_txtEmpLastName').clear().type(user.myInfo.lastName)
@@ -23,4 +23,19 @@ export function fillPersonalDetails(user){
         cy.get('#personal_chkSmokeFlag').uncheck()
     }
     cy.get('#btnSave').should('have.value','Save').click()
+}
+export function verifyPersonalDetails(user) {
+    cy.get('#personal_txtEmpFirstName').should('have.value',user.myInfo.firstName)
+    cy.get('#personal_txtEmpLastName').should('have.value',user.myInfo.lastName)
+    cy.get('#personal_txtEmployeeId').should('have.value',user.myInfo.employeeId)
+    cy.get('#personal_txtLicenNo').should('have.value',user.myInfo.drivingLicenseNumber)
+    cy.get('#personal_txtLicExpDate').should('have.value',user.myInfo.licenseExpiryDate)
+    cy.get('#personal_txtNICNo').should('have.value',user.myInfo.SSNnumber)
+    cy.get('#personal_txtSINNo').should('have.value',user.myInfo.SINnumber)
+    cy.get('ul.radio_list').find('input:checked').should('have.value', user.myInfo.gender)
+    cy.get('#personal_cmbMarital').should('have.value',user.myInfo.maritalStatus)
+    cy.get('#personal_cmbNation').contains(user.myInfo.nationality).should('be.selected')
+    cy.get('#personal_DOB').should('have.value',user.myInfo.dob)
+    cy.get('#personal_txtEmpNickName').should('have.value',user.myInfo.nickName)
+    cy.get('#personal_txtMilitarySer').should('have.value',user.myInfo.militaryService)
 }
