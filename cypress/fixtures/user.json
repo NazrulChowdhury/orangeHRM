@@ -18,6 +18,8 @@
         "nickName" : "nazu",
         "militaryService" : "Commando",
         "Smoker" : 0,
-        "bloodGroup" : "A+"
+        "bloodGroup" : "A+",
+        "comment" : "my sexy photo",
+        "newComment": "my cool photo"
     }
 }

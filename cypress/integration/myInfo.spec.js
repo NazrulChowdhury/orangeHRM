@@ -5,15 +5,25 @@ describe('my info module testsuit',()=>{
     beforeEach(()=>{
         cy.visit('/')
         cy.login(user)
-    })
-    it('successfully update personal information by submitting given form',()=>{
         myInfoPage.goToMyInfoPage()
+    })
+    it('Update personal information by submitting given form',()=>{
         myInfoPage.updatePersonalDetails(user)
         myInfoPage.verifyPersonalDetails(user)
     })
-    it('successfully update Custom Fields blood type',()=>{
-        myInfoPage.goToMyInfoPage()
+    it('Update Custom Fields blood type',()=>{
         myInfoPage.updateBloodType(user)
         myInfoPage.verifyBloodType(user)
+    })
+    it('Upload an attachment',()=>{
+        myInfoPage.uploadAttachment(user)
+        myInfoPage.verifyAttachment(user)
+    })
+    it('edit uploaded attachment',()=>{
+       myInfoPage.editAttachment(user)
+       myInfoPage.verifyEditedAttachment(user)
+    })
+    it('upload profile photo',()=>{
+       myInfoPage.uploadProfilePhoto()
     })
 })
