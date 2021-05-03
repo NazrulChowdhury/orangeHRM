@@ -2,7 +2,7 @@ import user from "../fixtures/user.json"
 import * as myInfoPage from "../page.modules/myInfo.js"
 
 describe('my info module testsuit',()=>{
-    before(()=>{
+    beforeEach(()=>{
         cy.visit('/')
         cy.login(user)
     })
@@ -10,5 +10,10 @@ describe('my info module testsuit',()=>{
         myInfoPage.goToMyInfoPage()
         myInfoPage.updatePersonalDetails(user)
         myInfoPage.verifyPersonalDetails(user)
+    })
+    it('successfully update Custom Fields blood type',()=>{
+        myInfoPage.goToMyInfoPage()
+        myInfoPage.updateBloodType(user)
+        myInfoPage.verifyBloodType(user)
     })
 })

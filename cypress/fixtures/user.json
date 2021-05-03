@@ -17,6 +17,7 @@
         "dob" : "1981-11-19",
         "nickName" : "nazu",
         "militaryService" : "Commando",
-        "Smoker" : 0
+        "Smoker" : 0,
+        "bloodGroup" : "A+"
     }
 }

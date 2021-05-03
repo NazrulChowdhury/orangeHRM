@@ -39,3 +39,14 @@ export function verifyPersonalDetails(user) {
     cy.get('#personal_txtEmpNickName').should('have.value',user.myInfo.nickName)
     cy.get('#personal_txtMilitarySer').should('have.value',user.myInfo.militaryService)
 }
+export function updateBloodType(user){
+    cy.get('#btnEditCustom').should('have.value','Edit').click()
+    cy.get('[name=custom1]').select(user.myInfo.bloodGroup)
+    cy.get('#btnEditCustom').should('have.value','Save').click()
+    cy.url().should('contain','#custom')
+}
+export function verifyBloodType(user){
+    cy.get('[name=custom1]')
+    .find('option:checked')
+    .should('have.value', user.myInfo.bloodGroup)
+}
