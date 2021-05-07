@@ -1,2 +1,2 @@
 # orangeHrm
-A UI automation e2e test project of the site: https://opensource-demo.orangehrmlive.com/
+A UI automation e2e test using Cypress of the project: https://opensource-demo.orangehrmlive.com/
